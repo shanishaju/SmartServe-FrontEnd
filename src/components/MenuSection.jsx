@@ -7,16 +7,16 @@ import { GetMenuApi, GetMenuItemByIdApi } from '../services/allApi';
 function MenuSection() {
     const [menus, setMenus] = useState([]);
     const [menuItems, setMenuItems] = useState([]);
-  
+
     useEffect(() => {
         const fetchMenus = async () => {
             try {
                 const response = await GetMenuApi();
                 setMenus(response.data);
                 console.log(response.data);
-                
+
                 response.data.length > 0 && fetchMenuItems(response.data[0].id);
-                
+
             } catch (error) {
                 console.error("Error fetching menus:", error);
             }
@@ -28,12 +28,12 @@ function MenuSection() {
         try {
             const response = await GetMenuItemByIdApi(id);
             console.log("Fetched items:", response.data);
-            setMenuItems(response.data.items); 
+            setMenuItems(response.data.items);
         } catch (error) {
             console.error("Error fetching menu items:", error);
         }
     };
-    
+
 
     return (
         <div>
@@ -74,17 +74,17 @@ function MenuSection() {
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   {menuItems.map((item) => (
-    <div key={item._id}>  
-        <div className="flex text-white justify-between items-center border-b border-gray-600 pb-2 mb-2">
-            <h3 className="text-xl font-semibold">{item.itemName}</h3>
-            <span className="text-xl font-bold">${item.price}</span>
-        </div>
-        <p className="text-gray-300 mb-6">
-            {item.description || "Deliciously crafted with premium ingredients!"}
-        </p>
-    </div>
-))}
+                        {menuItems.map((item) => (
+                            <div key={item._id}>
+                                <div className="flex text-white justify-between items-center border-b border-gray-600 pb-2 mb-2">
+                                    <h3 className="text-xl font-semibold">{item.itemName}</h3>
+                                    <span className="text-xl font-bold">${item.price}</span>
+                                </div>
+                                <p className="text-gray-300 mb-6">
+                                    {item.description || "Deliciously crafted with premium ingredients!"}
+                                </p>
+                            </div>
+                        ))}
 
                     </div>
                 </div>

@@ -48,13 +48,13 @@ function Nav() {
 
         console.log("Data to be sent to backend:", menuData);
 
-        try{
+        try {
             const response = await AddMenuApi(menuData);
             console.log("Response from backend:", response.data);
         }
-        catch(error){
+        catch (error) {
             console.log("Error adding menu:", error);
-            }
+        }
         handleClose();
 
     };
@@ -62,7 +62,7 @@ function Nav() {
     return (
         <nav className="px-16 py-8" style={{ backgroundColor: '#121618' }}>
             <div className="container mx-auto flex items-center justify-between">
-                <h1 className="text-xl font-bold text-white">THAIKITCHEN</h1>
+                <h1 className="text-xl font-bold text-white"><span className='text-blue-400'>SMART</span> <span className='text-white'>SERVE</span></h1>
 
                 <div className="hidden lg:flex gap-6 text-gray-300 font-bold text-sm">
                     <a href="/" className="hover:text-blue-400">HOME</a>
