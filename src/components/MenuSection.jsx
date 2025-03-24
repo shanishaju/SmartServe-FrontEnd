@@ -26,7 +26,7 @@ function MenuSection() {
                 />
 
 
-                <div className="relative z-20 max-w-5xl mx-auto border-4 border-gray-500 p-8 flex flex-col justify-center h-full ">
+                <div className="relative z-20 max-w-5xl mx-auto border-4 border-gray-500 p-4 sm:p-6 md:p-8 flex flex-col justify-center h-full mx-4">
                     <img
                         src={leftDrink}
                         alt="left drink"

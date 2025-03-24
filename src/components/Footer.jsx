@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 
 function Footer() {
@@ -7,13 +7,17 @@ function Footer() {
         <>
             <div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-black text-white text-center  p-8">
-                    <div className='border-2 border-gray-600 p-3 hover:border-blue-800'>
-                        <h1 className="text-2xl font-bold mb-2">CONTSCT WITH US</h1>
-                        <p className="text-sm">
-                            We are a Thai restaurant located in the heart of the city. We offer a variety of Thai
-                            dishes and drinks. We are open 7 days a week and offer dine-in, takeout, and delivery
-                            services.
-                        </p>
+                    <div className='border-2 border-gray-600 p-3 hover:border-blue-800 flex flex-col items-center text-center'>
+                        <h1 className="text-2xl font-bold mb-4">CONTACT WITH US</h1>
+
+                        <div className="flex items-center gap-2 mb-2">
+                            <FaPhoneAlt className="text-blue-500" />
+                            <p className="text-sm">+91 8888888888</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <FaEnvelope className="text-blue-500" />
+                            <p className="text-sm">contact@thaikitchen.com</p>
+                        </div>
                     </div>
 
                     <div className='border-2 border-gray-600 p-3 hover:border-blue-800'>
@@ -40,7 +44,6 @@ function Footer() {
                         <h1 className="text-2xl font-bold mb-2">FIND US</h1>
                         <p>First floor,</p>
                         <p> Geo infopark, </p>
-                        <p>EXPY, Kakkanad</p>
                     </div>
                 </div>
 
